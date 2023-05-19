@@ -4,45 +4,51 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "bhavuka";
+  src: url("fonts/Bhavuka\ Regular.ttf");
+}
+
+
+
+
 
 #burgermenu{
-  margin-top: -25px;
   display: block; /*burgermenu vises*/
   z-index: 20;
+  position: relative;
   
 }
 
 .menu-items{
-  margin-top:-25px; /*for at få menu-items kassen til at gå helt op til toppen af skærmen - ellers vistes lidt af billedet i toppen*/
-  margin-left: 72%;
-
-  display: flex;
-  align-items: center;
-  background-color: blue;
-  
-  padding-top: 120px;
+  padding-left: 45%;
+  padding-top: 120%;
+  padding-right: 45%;
   height: 100vh;
-  width: 40%;
-  transform: translate(-150%);
+  width: 100%;
+  
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
   display: none; /*Burgermenuen er ikke synlig indtil man trykker på den*/
   flex-direction: column;
-  padding-left: 50px;
   transition: transform 0.5s ease-in-out;
   text-align: center;
-  z-index: 25;
 }
 
 .menu-items a{
-  line-height: 400%;
-  margin-right: 35%;
-  margin-top: 10%;
+  margin-right: 30%;
   font-family: 'Life Savers', cursive;
+  font-size: 15pt;
+  font-weight: bold;
+  color: rgb(60, 59, 59);
   text-decoration: none;
-  z-index: 150;
+  position: relative;
 }
 
+
+      
 .menu-items a:hover{
-  text-decoration:underline rgb(90, 150, 221);
+  text-decoration:underline rgba(254, 59, 10, 0.709);
   cursor: pointer;
 
 }
@@ -52,8 +58,7 @@
 }
 
 .navbar {
-  width: 100%;
-
+margin-left: 90%;
 }
 
 
@@ -62,6 +67,8 @@
   position: relative;
   height: 60px;
 }
+
+
 
 .nav-container .checkbox { /*styling af den usynlige chechbox, der ligger under burgerikonet, så det virker når man klikker på det - ellers er det bare et billede*/
   position: absolute;
@@ -88,30 +95,35 @@
   justify-content: space-between;
 }
 
-.nav-container .hamburger-lines .line { /*styling af den enkelte linje i burgeren*/
+/*Viser indholdet på i den åbne menu (X)*/ 
+.checkbox:checked ~ .menu-items {
+  display: flex;
+  z-index: 200;
+}
+
+
+/*styling af de enkelte linjer i burgeren*/
+.nav-container .hamburger-lines .line {
   display: block;
   height: 4px;
   width: 100%;
   border-radius: 10px;
-  background: black
+  background: rgb(255, 255, 255)
 }
-
 .nav-container .hamburger-lines .line1 { 
   transform-origin: 0% 0%;
   transition: transform 0.4s ease-in-out;
 }
-
 .nav-container .hamburger-lines .line2 { 
   transition: transform 0.2s ease-in-out;
 }
-
 .nav-container .hamburger-lines .line3 {
   transform-origin: 0% 100%;
   transition: transform 0.4s ease-in-out;
 }
 
 
-
+/*Styling af krydset til den åbne burgermenu*/
 .nav-container input[type="checkbox"]:checked ~ .menu-items { /* hvad der sker når den usynlige checkbox er checket af*/
   transform: translateX(0);
 }
@@ -121,21 +133,13 @@
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 { /*midterste linje forsvinder*/
   transform: scaleY(0);
 }
-
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {/*nederste burgerlinje drejer højre ende op*/
   transform: rotate(45deg);
   transform: rotate(-45deg);
 }
 
 
-/*Viser indholdet på i den åbne menu (X)*/ 
-  .checkbox:checked ~ .menu-items {
-    display: flex;
-    z-index: 200;
-}
-
-/*
-  .karusel {
+  /* .karusel {
     position: relative;
     display: block;
     width: 100%;
@@ -170,9 +174,9 @@
   #pic4 {
     background-image: url(fotos/halmivinden.jpg);
     animation-delay: 20s;
-  }
+  } */
 
-  @-webkit-keyframes fade {
+  /* @-webkit-keyframes fade {
     0% {
       opacity: 1;
     }
@@ -206,16 +210,16 @@
       opacity: 1;
     }
   }
-
-
-
-
-*/
+ */
 
 
 
 /*Baggrundsbillede med tekst foran*/
+.skærmfotoM{
+  display: none;
+}
 .skærmfoto {
+  margin-top: -8.5%;
   position: relative;
   text-align: center;
   color: white;
@@ -225,6 +229,48 @@
 .skærmfoto img{ /*så baggrundsbilledet fylder hele skærmen*/
   margin-bottom: -50%;  
 }
+
+.skærmfotoMdyr{
+  display: none;
+}
+.skærmfotoNYD{
+  height: 50%;
+  margin-top: -5.5%;
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 0;
+}
+
+.skærmfotoNYD img{
+  margin-bottom: -5%;
+}
+
+.skærmfotoNYD a{
+  text-decoration: none;
+  color: rgb(255, 252, 255);
+  font-family: 'Bhavuka',sans-serif;
+  font-weight: normal;
+  font-size: 35pt;
+  background-color: rgba(235, 218, 156, 0.716);
+  padding-top: 10%;
+  padding-bottom: 10%;
+  border-radius: 50%;
+}
+
+.skærmfotoNYD a:hover{
+  text-decoration: rgb(79, 77, 77) none 2px;
+}
+
+
+
+
+.centeredM{
+  display: none;
+}
+.centeredMdyr{
+  display: none;
+}
 .centered {
   position: absolute;
   top: 360%;
@@ -232,9 +278,82 @@
   transform: translate(-50%, -50%);
   opacity: 0.8;
 }
+
+
+
+/* Placering af "Nyd Roen" overskriften*/
+.top-leftNYD{
+  position: absolute;
+  top: 13%;
+  left: 4%;
+}
+
+.top-leftVAND{
+  position: absolute;
+  top: 16%;
+  left: 4%;
+}
+
+/* Placering af links over baggrundbillede "Nyd Roen" */
+.centrum{
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transition: transform 0.7s; 
+}
+.centrum:hover{
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.2);
+}
+.bottom-left {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+  transition: transform 0.7s; 
+}
+
+.bottom-leftVAND{
+  position: absolute;
+  bottom: 18%;
+  margin-left: 5%;
+  transition: transform 0.7s;
+  border: solid 1px white;
+  width: 31%;
+}
+
+.bottom-leftVAND p{
+  background-color: rgba(80, 146, 69, 0.4);
+  font-family: 'Bhavuka',sans-serif;
+  font-size: 22pt;
+  text-align: left;
+  padding: 5% 0% 10% 5%;
+}
+
+
+
+
+.bottom-left:hover{
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.2);
+}
+.bottom-right{
+  position: absolute;
+  bottom: 5%;
+  right: 11%;
+  transition: transform 0.7s; 
+}.bottom-right:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.2);
+  }
+
+
+/* placering af logoet til venstre på "under" forsiderne */
 .top-left {
   position: absolute;
-  top: 1%;
+  top: 4%;
   left: 5%;
 }
 
@@ -244,33 +363,62 @@
   margin-top: -90%;
 }
 
+.indholdet3fotosM{
+  display: none;
+}
+
 .fotobox{
   position: relative;
   text-align: center;
   color: white;
   margin-bottom: 10%;
 }
+.fotoboxM{
+  display: none;
+}
+
 /*Afstand mellem de 3 billeder*/
 .fotobox img{
   margin-bottom: 5%;
+  border-radius: 3%;
 }
-
+.fotoboxM img{
+  display: none;
+}
 
 .textbox{
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
+  width: 25%;
+  height: 32%;
   transform: translate(-50%, -50%);
-  border: black solid 2px;
-  background-color: rgb(188, 228, 156);
-  color: rgb(255, 0, 0);
-  text-align:left;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+.textboxM{
+  display: none;
+}
+
+.textbox p{
+  padding-top: 6%;
+  font-family: 'Bhavuka',sans-serif;
+  font-weight:200;
+  font-size: 15pt;
+  color: rgb(53, 50, 50);
+}
+.textboxM p{
+  display: none;
 }
 
 
 
 
 
+
+.menu-itemsM{
+  display: none;
+}
 
 /*HER STARTER MEDIA QUERIE*/
 @media screen and (max-width: 800px) {
@@ -281,47 +429,68 @@
   }
 
   #burgermenu{
-      margin-top: -25px;
+      margin-top:-5%;
       display: block; /*burgermenu vises*/
   }
   .menu-items {
+      display: none;
       margin-top:-25px; /*for at få menu-items kassen til at gå helt op til toppen af skærmen - ellers vistes lidt af billedet i toppen*/
-  }
+      margin-left: -85%;
+      padding-top: 120%;
+      padding-right: 80%;
+      padding-left: 105%;
+      background-color: rgba(255, 255, 255, 0.7);
+      
+      
+      height: 95.5vh;
+      width: 0%;
+      transform: translate(-150%);
+      flex-direction: column;
+      
+      transition: transform 0.5s ease-in-out;
+      text-align: center;
+    }
+
+    .menu-items a{
+      color: rgb(101, 96, 96);
+      font-family: 'Life Savers', cursive;
+      font-size: 15pt;
+      font-weight: bold;
+      text-decoration: none;
+      
+    }
+
+    .menu-items a:hover{
+      text-decoration:underline rgba(254, 59, 10, 0.709);
+      cursor: pointer;
+      }
+
+  
+
+    .checkbox:checked ~ .menu-items {
+      display: flex;
+      z-index: 200;
+    }
+
+
   .container {
       width: 100%;
       margin: auto;
     }
     
     .navbar {
-      width: 100%;
+      margin-left: 80%;
     }
     
     .nav-container {
-      display: flex;
       justify-content: space-between;
       align-items: center;
       height: 62px;
       /*margin-top: 20px;*/
     }
-    
-    .navbar .menu-items {
-      display: flex;
-    }
-    
-    .navbar .nav-container li { /*for at alle punkter ikke får en prik foran sig (fordi <li>)*/
-      list-style: none;
-    }
-    
-    .navbar .nav-container a {
-      text-decoration: none;
-      color: black;
-      font-weight: 500;
-      font-size: 1.2rem;
-      padding: 0.7rem;
-    }
+  
     
     .nav-container {
-      display: block;
       position: relative;
       height: 60px;
     }
@@ -356,7 +525,7 @@
       height: 4px;
       width: 100%;
       border-radius: 10px;
-      background: black
+      background: rgb(255, 255, 255)
     }
     
     .nav-container .hamburger-lines .line1 { 
@@ -373,42 +542,8 @@
       transition: transform 0.4s ease-in-out;
     }
     
-    .navbar .menu-items { /*styling til hvordan linksene er placeret og transformeres*/
-      padding-top: 120px;
-      background-color: rgb(255, 255, 255);
-      height: 120vh;
-      width: 100%;
-      transform: translate(-150%);
-      display: flex;
-      flex-direction: column;
-      padding-left: 50px;
-      transition: transform 0.5s ease-in-out;
-      text-align: center;
-      line-height: 10PX;
-    }
   
-    
-    .navbar .menu-items li { /*tekststørrelse, -type og den slags*/
-      margin-bottom: 1.2rem;
-      font-size: 1.5rem;
-      font-weight: 500;
-      text-align: left;
-      padding-left: 30%;
-    }
-    .navbar .menu-items .ddc { /*det samme, men til de punkter, der var dropdown content (derfor ddc) i laptopnaven*/
-      margin-bottom: 1.2rem;
-      font-size: 1rem;
-      font-weight: 400;
-      text-align: left;
-    }
-    #burgerlogo {
-      position: absolute;
-      top: 5px;
-      left: 15px;
-      width: 10%;
-      height: auto; 
-      margin-top: 20px;
-    }
+  
     
     .nav-container input[type="checkbox"]:checked ~ .menu-items { /* hvad der sker når den usynlige checkbox er checket af*/
       transform: translateX(0);
@@ -426,9 +561,107 @@
       transform: rotate(45deg);
       transform: rotate(-45deg);
     }
+
+
+
+    /* Styling af siden "Mød Dyrene" + dens responsive side
+      & mobilforside billede til "Naturperlen". */
+    .skærmfoto{
+      display: none;
+    }
+    .skærmfotoM{
+      display: block;
+      width: 100%;
+      margin-top: -8.5%;
+      position: relative;
+      text-align: center;
+      z-index: 0;
+    }
+    .skærmfotoMdyr{
+      display: block;
+      width: 100%;
+      margin-top: -50% ;
+      position: relative;
+      text-align: center;
+      z-index: 0;
+    }
+   
+     .centered{
+      display: none;
+    }
+    .centeredM{
+      display: block;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   
-    .nav-container input[type="checkbox"]:checked ~ .logo{/*logoet ligger lige nu under kassen med menu-items og skjules - så display=none er ligegyldigt, vi skal have den ind i menu-items kassen, hvis den skal vises, men det tænker jeg vi gør, hvis vi har tid*/
-      display: block; }
+    .top-left{
+      display: none;
+    }
+    .centeredMdyr{
+      display: block;
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .indholdet3fotos{
+      display: none;
+    }
+    .indholdet3fotosM{
+      display: block;
+      margin-top: -120%;
+    }
+  
+    .fotobox{
+      display: none;
+    }
+    .fotoboxM{
+      display: block;
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    /*Afstand mellem de 3 billeder*/
+    .fotoboxM img{
+      display: block;
+      margin-bottom: 20%;
+      margin-left: 10%;
+      border-radius: 3%;
+    }
+  
+  
+    .textboxM{
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 70%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+    }
+    
+    .textboxM p{
+      display: block;
+      padding-top: 6%;
+      padding-bottom: 3%;
+      font-family: 'Bhavuka',sans-serif;
+      font-weight:200;
+      font-size: 15pt;
+      color: rgb(53, 50, 50);
+    }
+  
+
+
+
+
+
+
+
  
 }
 /*HER SLUTTER MEDIA QUERIE*/

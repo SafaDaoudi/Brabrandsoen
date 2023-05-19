@@ -7,76 +7,161 @@
     <title>Mød Dyrene</title>
 </head>
 <body>
-    <!--LYD, vil gerne fjernepanelet m. autoplay+loop-->
-  <!-- <embed src="audio/fuglelyde2.mp3" loop="true" autostart="true" width="20" height="10">
-    <audio controls autoplay loop>
-        <source src="audio/fuglelyde2.mp3" type="audio/mp3">
-        <source src="audio/fuglelyde2.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio> -->
-
   
-
+  <header>
+    <!--Burger-->
+    <nav id="burgermenu">
+     <div class="navbar">
+       <div class="container nav-container">
+           <input class="checkbox" type="checkbox" name="" id="" />
+           <div class="hamburger-lines">
+             <span class="line line1"></span>
+             <span class="line line2"></span>
+             <span class="line line3"></span>
+           </div> 
+ 
+         
+           <div class="menu-items">
+             <br> <br> <br>
+             <a href="#">Nyd Roen</a>  <br> <br> <br> <br>
+             <a href="#">Fysisk Aktivitet</a> <br> <br> <br> <br>
+             <a href="#">Mød Dyrene</a>
+           </div>
+           
+           <!-- Burgermenu til mobilen - få ting skal laves om derfor nyt navn -->
+           <div class="menu-itemsM">
+            <br> <br> <br>
+            <a href="#">Nyd Roen</a>  <br> <br> <br> <br>
+            <a href="#">Fysisk Aktivitet</a> <br> <br> <br> <br>
+            <a href="#">Mød Dyrene</a>
+          </div>
+         
+       </div>
+     </div>
+   </nav>
+ </header>
+ 
 
     <!--Det store baggrundsbillede + overskriften m. figurene-->
     <div class="skærmfoto">
       <img src="fotos/dyreneL2.jpg" alt="forsidebilledemøddyrene">
       <div class="top-left"><img src="fotos/dyrene+figur.png" alt=""></div>
-      <audio src="audio/fuglelyde2.mp3" style="display:none;" autoplay></audio>
     </div>
     
     
+
+     <!-- De billeder der ses i det responsive webdesign -->
+      <div class="skærmfotoMdyr">
+      <img src="fotos/dyreneM.jpg" alt="forsidebilledemobil">
+      <div class="centeredMdyr">
+        <img src="fotos/dyrene+figurM.png" alt="overskriftmobil">
+      </div>
+    </div>
+
+
+
+
     
 <article>
-    <!--Her starter de 3 artikler-->
+    <!--Her starter de 3 artikler til Laptop-->
       <div class="indholdet3fotos">
 
         <div class="fotobox">
         <img src="fotos/kørerne.jpg" alt="fotoafkøer">
         <div class="textbox">
-          Langs stien er der hegn der værner <br>
-          flokke af køer som græsser på <br>
-          markerne og mælkebøtte engene. <br>
-          Hvis man vil helt tæt på, kan man <br>
-          sågar gå derind.
+          <p> Langs stien er der hegn der værner om flokke af <br>
+          køer som græsser på markerne og mælkebøtte engene. <br>
+          Køerne giver en forstærket følelse af at være ude <br>
+          på landet, selvom du stadig befinder dig i Århus. <br>
+          Hvis man vil helt tæt på, kan man sågar gå derind.</p>
         </div>
         </div>
 
 
         <div class="fotobox">
-        <img src="fotos/hesten.jpg" alt="fotoafgeder">
+        <img src="fotos/hesten.jpg" alt="fotoafheste">
         <div class="textbox">
-          Døde Å løber under stien og har udløb i Brabrand Sø. <br>
-          Området er præget af store rørskove og engarealer hvor <br>
+          <p> Døde Å er præget af store rørskove og engarealer hvor <br>
           heste græsser. Om vinteren, tidligt forår og sent efterår <br> 
-          er disse enge ofte oversvømmet. Her får engene nye bebor,
-          <br> nemlig et virvar af svaner, gæs, fasaner og ænder.<br>
-          Skal du opleve hestene i den dejlige sommer,<br>
-          så skal de opleves før den årlige <br>
-          oversvømmelse.
+          er disse enge ofte oversvømmet. Her flytter svaner, gæs, <br>
+          fasaner og ænder ind.Skal du opleve hestene i den<br>
+          dejlige sommer, så skal de opleves før den årlige<br>
+          oversvømmelse. </p>
+        </div>
         </div>
         </div>
 
         <div class="fotobox">
-        <img src="fotos/gederne.jpg" alt="fotoafheste">
+        <img src="fotos/gederne.jpg" alt="fotoafgeder">
         <div class="textbox">
-          Mod søens nordlige del er der <br>
-          stiforbindelse forbi Sølyst. Mod Sølyst <br>
-          findes et mindre besøgslandbrug, hvor <br>
-          små høns og heste, får og geder m.m. <br>
-          har hjemme. <br>
-                  
+         <p> Mod søens nordlige del er der stiforbindelse forbi Sølyst.<br>
+          Mod Sølyst findes et mindre besøgslandbrug, hvor små høns<br>
+          og heste, får og geder m.m. har hjemme. Den idylliske <br>
+          atmosfær af dansk sommer, skal også tilskrives disse <br>
+          skønne væsner.</p>     
         </div>
         </div>
 
-        
-
-
-      </div>
-    
+        </div>
 
 
 
-    </article>
+
+
+
+
+
+        <!--Her starter de 3 artikler til Mobilen-->
+        <div class="indholdet3fotosM">
+
+          <div class="fotoboxM">
+          <img src="fotos/kørerneMOBIL.jpg" alt="fotoafkøermobil">
+          <div class="textboxM">
+            <p> Langs stien er der hegn der værner om <br>
+            flokke af køer som græsser på markerne og <br>
+            mælkebøtte engene. Køerne giver en <br>
+            forstærket følelse af at være ude på landet, <br>
+            selvom du stadig befinder dig i Århus. <br>
+            Hvis man vil helt tæt på, kan man sågar <br>
+            gå derind.</p>
+          </div>
+          </div>
+  
+  
+          <div class="fotoboxM">
+          <img src="fotos/hestenMOBIL.jpg" alt="fotoafgedermobil">
+          <div class="textboxM">
+            <p> Døde Å er præget af store rørskove og<br>
+                engarealer hvor heste græsser. Om vinteren,<br>
+                tidligt forår og sent efterår er disse enge<br>
+                ofte oversvømmet. Her flytter svaner, gæs,<br>
+                fasaner og ænder ind.Skal du opleve hestene <br>
+                i den dejlige sommer, så skal de opleves før <br>
+                den årlige oversvømmelse. </p>
+          </div>
+          </div>
+          </div>
+  
+          <div class="fotoboxM">
+          <img src="fotos/gederneMOBIL.jpg" alt="fotoafhestemobil">
+          <div class="textboxM">
+           <p> Mod søens nordlige del er der stiforbindelse <br>
+            forbi Sølyst.Mod Sølyst findes et mindre <br>
+            besøgslandbrug, hvor små høns og heste, får<br>
+            og geder m.m. har hjemme. Den idylliske- <br>
+            atmosfær af dansk sommer, skal også til- <br>
+            skrives disse skønne væsner.</p>
+                    
+          </div>
+          </div>
+          </div>
+
+
+
+
+
+
+
+</article>
 </body>
 </html>
