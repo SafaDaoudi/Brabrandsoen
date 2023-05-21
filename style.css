@@ -36,20 +36,24 @@
 }
 
 .menu-items a{
-  margin-right: 30%;
-  font-family: 'Life Savers', cursive;
+  margin-right: 40%;
+  font-family: 'Bhavuka',sans-serif;
   font-size: 15pt;
-  font-weight: bold;
+  font-weight: lighter;
   color: rgb(60, 59, 59);
   text-decoration: none;
   position: relative;
+  transition: transform 0.7s;
 }
 
 
       
 .menu-items a:hover{
-  text-decoration:underline rgba(254, 59, 10, 0.709);
+  text-decoration:underline rgba(193, 182, 87, 0.428);
   cursor: pointer;
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.3);
 
 }
 .container {
@@ -263,8 +267,6 @@ margin-left: 90%;
 }
 
 
-
-
 .centeredM{
   display: none;
 }
@@ -421,7 +423,7 @@ margin-left: 90%;
 /*Afstand mellem de 3 billeder*/
 .fotobox img{
   margin-bottom: 5%;
-  border-radius: 3%;
+  border-radius: 0%;
 }
 .fotoboxM img{
   display: none;
@@ -448,18 +450,31 @@ margin-left: 90%;
   font-size: 15pt;
   color: rgb(53, 50, 50);
 }
+
+
+
 .textboxM p{
   display: none;
 }
-
-
-
-
-
-
 .menu-itemsM{
   display: none;
 }
+
+.skærmfotoNYDM{
+  display: none;
+}
+
+.skærmfotoNYD-RESP{
+  display: none;
+}
+
+.skærmfotoMdyr2{
+  display: none;
+}
+.centeredMdyr2{
+  display: none;
+}
+
 
 /*HER STARTER MEDIA QUERIE*/
 @media screen and (max-width: 800px) {
@@ -496,7 +511,7 @@ margin-left: 90%;
       color: rgb(101, 96, 96);
       font-family: 'Bhavuka', sans-serif;
       font-size: 15pt;
-      font-weight: bold;
+      font-weight: lighter;
       text-decoration: none;
       transition: transform 0.5s;
       
@@ -536,7 +551,7 @@ margin-left: 90%;
     
     .nav-container {
       position: relative;
-      height: 60px;
+      height: 30px;
     }
     
     .nav-container .checkbox { /*styling af den usynlige chechbox, der ligger under burgerikonet, så det virker når man klikker på det - ellers er det bare et billede*/
@@ -629,7 +644,185 @@ margin-left: 90%;
       text-align: center;
       z-index: 0;
     }
-   
+
+    .skærmfotoMdyr2{
+      display: block;
+      width: 100%;
+      position: relative;
+     }
+
+     .centeredMdyr2{
+      display: block;
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+     }
+  
+
+
+    .skærmfotoNYD{
+      display: none;
+    }
+    .skærmfotoNYDM{
+      display: block;
+      margin-top: -8%;
+    }
+
+
+
+
+/* TIL MOBIL - "Nyd Roen" forsiden (linksene + overskriften) */
+.top-leftNYDM{
+display: block;
+position: absolute;
+top: 15%;
+left: 10%;
+}
+
+.centrumM{
+  position: absolute;
+  top: 40%;
+  left: 35%;
+}
+
+.centrumM a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Bhavuka',sans-serif;
+  font-size: 20pt;
+  background-color: rgba(235, 218, 156, 0.716);
+  border-radius: 20px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+
+.bottom-leftM{
+  display: block;
+  position: absolute;
+  bottom: 30%;
+  left: 45%;
+}
+
+.bottom-leftM a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Bhavuka',sans-serif;
+  font-size: 23pt;
+  background-color: rgba(235, 218, 156, 0.716);
+  border-radius: 20px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.bottom-rightM{
+  display: block;
+  position: absolute;
+  bottom: 10%;
+  left: 45%;
+}
+/* Nederste link i FYSISK AKTIVITET skulle rykkes mere til venstre, derfor nyt navn */
+.bottom-rightFAM{
+   display: block;
+  position: absolute;
+  bottom: 10%;
+  left: 38%;
+}
+.bottom-rightFAM a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Bhavuka',sans-serif;
+  font-size: 23pt;
+  background-color: rgba(235, 218, 156, 0.716);
+  border-radius: 20px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+/* Stopper her */
+
+.bottom-rightM a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Bhavuka',sans-serif;
+  font-size: 23pt;
+  background-color: rgba(235, 218, 156, 0.716);
+  border-radius: 20px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+/* VANDET Mobil styling */
+.skærmfotoNYD-RESP{
+  display: block;
+  width: 100%;
+  margin-top: -8.5%;
+  position: relative;
+  text-align: center;
+  z-index: 0;
+}
+
+.bottom-leftVAND-RESP{
+  display: block;
+  position: absolute;
+  bottom: 28%;
+  border: solid white 1px;
+  left: 15%;
+}
+
+.bottom-leftVAND-RESP p{
+  background-color: rgba(80, 146, 69, 0.7);
+  color: white;
+  font-family: 'Bhavuka',sans-serif;
+  font-size: 15pt;
+  text-align: left;
+  line-height: 130%;
+  padding: 5% 0% 10% 5%;
+}
+
+
+
+
+/* CYKLING Mobil styling */
+.top-leftCYKEL{
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.bottom-leftCYKEL-RESP{
+  display: block;
+  position: absolute;
+  bottom: 30%;
+  border: solid white 1px;
+  left: 8%;
+}
+
+.bottom-leftCYKEL-RESP p{
+  background-color:rgba(193, 182, 87, 0.428);
+  color: white;
+  font-family: 'Bhavuka',sans-serif;
+  font-size: 15pt;
+  text-align: left;
+  line-height: 130%;
+  padding: 5% 0% 10% 5%;
+}
+/* CYKEL MOBIL Donkey Republic foto inkl. link */
+.bottom-rightCYKEL-RESP{
+  position: absolute;
+  bottom:1%;
+  right: 2%;
+  transition: transform 1s; 
+}
+.bottom-rightCYKEL-RESP a{
+  border: none;
+  background-color: transparent;
+}
+
+
+  /* Mød Dyrene MOBIL Styling */
      .centered{
       display: none;
     }
@@ -640,11 +833,7 @@ margin-left: 90%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
-  
-    .top-left{
-      display: none;
-    }
-    .centeredMdyr{
+  .centeredMdyr{
       display: block;
       position: absolute;
       top: 25%;
@@ -652,12 +841,19 @@ margin-left: 90%;
       transform: translate(-50%, -50%);
     }
   
+    .top-left{
+      display: none;
+    }
+
+
+  
+  
     .indholdet3fotos{
       display: none;
     }
     .indholdet3fotosM{
       display: block;
-      margin-top: -120%;
+      margin-top: -200%;
     }
   
     .fotobox{
@@ -665,6 +861,7 @@ margin-left: 90%;
     }
     .fotoboxM{
       display: block;
+      padding-bottom: 45px;
       position: relative;
       text-align: center;
       color: white;
@@ -672,16 +869,14 @@ margin-left: 90%;
     /*Afstand mellem de 3 billeder*/
     .fotoboxM img{
       display: block;
-      margin-bottom: 20%;
       margin-left: 10%;
-      border-radius: 3%;
+      border-radius: 0%;
     }
-  
-  
+    
     .textboxM{
       display: block;
       position: absolute;
-      top: 50%;
+      top: 40%;
       left: 50%;
       width: 70%;
       transform: translate(-50%, -50%);
