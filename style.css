@@ -1,5 +1,4 @@
-*{
-    padding: 0;
+*{ padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
@@ -275,7 +274,7 @@ margin-left: 90%;
 }
 
 .bottom-leftVAND p{
-  background-color: rgba(80, 146, 69, 0.4);
+  background-color: rgba(44, 83, 37, 0.179);
   font-family: 'Bhavuka',sans-serif;
   font-size: 22pt;
   text-align: left;
@@ -732,7 +731,7 @@ left: 10%;
 }
 
 .bottom-leftVAND-RESP p{
-  background-color: rgba(80, 146, 69, 0.7);
+  background-color: rgba(44, 83, 37, 0.179);
   color: white;
   font-family: 'Bhavuka',sans-serif;
   font-size: 10pt;
